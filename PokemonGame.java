@@ -1,6 +1,7 @@
 public class PokemonGame{
     public static void main (String args[]){
-        Pokemon pokemon = new Pokemon1();
+        Pokemon pokemon1 = new Pokemon("Pichu");
+        pokemon1.Pokemon2();
         System.out.println("initial status");
         pokemon1.printStatus();
 

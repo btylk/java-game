@@ -5,16 +5,16 @@ public class Pokemon{
     private int hp;
     private int pp;
 
-    public Pokemon1(){
-        this.name = "Froakie";
+    public Pokemon(String n){
+        this.name = n;
         this.level = 1;
         this.energy = 30;
         this.hp = 41;
         this.pp = 56;
     }
 
-    public Pokenmon2(){
-        this.name = 'Pichu';
+    public void Pokemon2(){
+        this.name = "Chamander";
         this.level = 1;
         this.energy = 19;
         this.hp = 20;
@@ -35,7 +35,7 @@ public class Pokemon{
     }
 
     public void run(){
-        this.enery -= 5;
+        this.energy -= 5;
     }
 
     public void attack(){
