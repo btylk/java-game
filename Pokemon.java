@@ -1,52 +1,66 @@
-public class Pokemon{
+public class Pokemon {
+    protected int level;
+    protected int hp;
+    protected int maxHp;
+    protected int exp;
+    protected int dmg;
+    protected String pic;
     private String name;
-    private int level;
-    private int energy;
-    private int hp;
-    private int pp;
 
-    public Pokemon(String n){
-        this.name = n;
-        this.level = 1;
-        this.energy = 30;
-        this.hp = 41;
-        this.pp = 56;
+    public Pokemon(String newName){
+        name = newName;
+        maxHp = 0;
+        hp = maxHp;
+        level = 0;
+        dmg = 0;
+        pic ="";
+
     }
 
-    public void Pokemon2(){
-        this.name = "Chamander";
-        this.level = 1;
-        this.energy = 19;
-        this.hp = 20;
-        this.pp = 40;
+    public String getPic(){
+        return pic;
     }
 
-    public void useBerry(){
-        this.hp += 20;
-        this.energy += 10;
+    public String getName(){
+        return name;
     }
 
-    public void sleep(){
-        this.hp += 25;
+    public int getLevel(){
+        return level;
     }
 
-    public void faint(){
-        this.hp = 0;
+    public int getHp(){
+        return hp;
     }
 
-    public void run(){
-        this.energy -= 5;
+    public int getMaxHp(){
+        return maxHp;
     }
 
-    public void attack(){
-        this.energy -= 10;
+    public int getDmg(){
+        return dmg;
     }
 
-    public void printStatus(){
-        System.out.println("Name= "+this.name);
-        System.out.println("Level= "+this.level);
-        System.out.println("Energy= "+this.energy);
-        System.out.println("HP= "+this.hp);
-        System.out.println("PP= "+this.pp);
+    public int getExp(){
+        return exp;
     }
+
+    public void takingDmg(int commingDmg){
+        hp -= commingDmg;
+        if(hp < 0){
+            hp = 0;
+        }
+    }
+
+    public String toString(){
+        return "Name :" + name + " Level :" + level + " HP :" + maxHp + "/" + hp;
+    }
+
+    public boolean isDie(){
+        if(hp == 0){
+            return true;
+        }
+        return false;
+    }
+
 }
