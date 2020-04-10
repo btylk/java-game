@@ -26,7 +26,26 @@ public class StartMenu extends JFrame{
         p2.setLayout(new FlowLayout());
         container.add(p1);
         container.add(p2);
-    
+        loginButton.addActionListener(new ActionListener(){
+        
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                name = nametext.getText();
+
+                new PlayerGui();
+                dispose();
+            }
+        });
+        nametext.addActionListener(new ActionListener(){
+        
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                name = nametext.getText();
+                
+                new PlayerGui();
+                dispose();
+            }
+        });
         pack();
         setSize(640,320);
         setVisible(true);

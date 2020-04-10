@@ -4,8 +4,10 @@ import java.awt.event.*;
 
 public class PlayerGui extends JFrame{
 
+    private Image img;
     public PlayerGui(){
         super("Main Menu");
+        
         Container container = getContentPane();
         container.setLayout(new GridLayout(3,1));
 
@@ -25,6 +27,34 @@ public class PlayerGui extends JFrame{
         p2.add(slogo);
         //p2.setLayout(new FlowLayout());
         container.add(p2);
+        slogo.addMouseListener(new MouseListener() {
+            public void mouseReleased(MouseEvent e) {
+                new StartMenu();
+                dispose();
+            }
+
+            public void mousePressed(MouseEvent e) {
+            }
+
+            public void mouseExited(MouseEvent e) {
+            }
+
+            public void mouseEntered(MouseEvent e) {
+            }
+
+            public void mouseClicked(MouseEvent e) {
+                new StartMenu();
+                dispose();
+            }
+        });
+        //panel_1.add(buttonLabel);
+        /*slogo.addActionListener(new ActionListener(){
+            @Override
+            public void actionPerformed(ActionEvent e){
+                new StartMenu();
+                dispose();
+            }
+        });*/
 
         JPanel p3 = new JPanel();
         ImageIcon playerIcon = new ImageIcon("pLogo.png");
