@@ -32,7 +32,7 @@ public class StartMenu extends JFrame{
             public void actionPerformed(ActionEvent e) {
                 name = nametext.getText();
 
-                new PlayerGui();
+                new PlayerGui(name);
                 dispose();
             }
         });
@@ -42,7 +42,7 @@ public class StartMenu extends JFrame{
             public void actionPerformed(ActionEvent e) {
                 name = nametext.getText();
                 
-                new PlayerGui();
+                new PlayerGui(name);
                 dispose();
             }
         });

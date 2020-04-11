@@ -2,7 +2,7 @@ import java.util.*;
 
 public class Player {
     protected int level;
-    protected String name;
+    private String name;
     protected String playerImg;
     //public Bag myBag;
     public Player(String newName){

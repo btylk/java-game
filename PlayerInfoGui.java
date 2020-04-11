@@ -4,7 +4,7 @@ import java.awt.event.*;
 
 public class PlayerInfoGui extends JFrame{
 
-    public PlayerInfoGui(/*Player player*/){
+    public PlayerInfoGui(Player player){
         super("Player Info");
         Container container = getContentPane();
         container.setLayout(new BorderLayout());
@@ -15,8 +15,8 @@ public class PlayerInfoGui extends JFrame{
         container.add(p1);*/
         JPanel status = new JPanel();
         status.setLayout(new BoxLayout(status,BoxLayout.Y_AXIS));
-        JLabel playerLabel = new JLabel("Name : " /*+ player.getName()s*/);
-        JLabel playerLV = new JLabel("Level : " /*+ player.getlvl()1*/);
+        JLabel playerLabel = new JLabel("Name : " + player.getName());
+        JLabel playerLV = new JLabel("Level : " + player.getlvl());
         status.add(playerLabel);
         status.add(playerLV);
         JPanel p2 = new JPanel();
@@ -26,7 +26,7 @@ public class PlayerInfoGui extends JFrame{
         JLabel logo = new JLabel(iconlogo);
         p1.add(logo);
         container.add(logo,BorderLayout.NORTH);
-        ImageIcon playerImg = new ImageIcon("SatoshiImg2.png");
+        ImageIcon playerImg = new ImageIcon(player.getPic());
         JLabel playPic =new JLabel(playerImg);
         p2.add(playPic);
         p2.add(status);
@@ -50,9 +50,9 @@ public class PlayerInfoGui extends JFrame{
 
     }
 
-    public static void main(String[] args){
+    /*public static void main(String[] args){
         new PlayerInfoGui();
-    }
+    }*/
 
 
 }

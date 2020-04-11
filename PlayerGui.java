@@ -5,7 +5,8 @@ import java.awt.event.*;
 public class PlayerGui extends JFrame{
 
     //private Image img;
-    public PlayerGui(){
+    String name;
+    public PlayerGui(String name){
         super("Main Menu");
         
         Container container = getContentPane();
@@ -29,7 +30,8 @@ public class PlayerGui extends JFrame{
         container.add(p2);
         slogo.addMouseListener(new MouseListener() {
             public void mouseReleased(MouseEvent e) {
-                new StartMenu();
+                //name = nametext.getText();
+                new PlayerInfoGui(new Satoshi(name));
                 dispose();
             }
 
@@ -43,7 +45,8 @@ public class PlayerGui extends JFrame{
             }
 
             public void mouseClicked(MouseEvent e) {
-                new StartMenu();
+                //name = nametext.getText();
+                new PlayerInfoGui(new Satoshi(name));
                 dispose();
             }
         });
@@ -78,7 +81,7 @@ public class PlayerGui extends JFrame{
         setVisible(true);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
     }
-    public static void main(String[] args){
-        new PlayerGui();
-    }
+    /*public static void main(String[] args){
+        new PlayerInfoGui();
+    }*/
 }
