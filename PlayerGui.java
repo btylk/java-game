@@ -4,7 +4,7 @@ import java.awt.event.*;
 
 public class PlayerGui extends JFrame{
 
-    private Image img;
+    //private Image img;
     public PlayerGui(){
         super("Main Menu");
         
@@ -66,7 +66,7 @@ public class PlayerGui extends JFrame{
         p3.add(pLogo);
         //p3.setLayout(new FlowLayout());
         container.add(p3);
-
+        //pack();
     
     
 
