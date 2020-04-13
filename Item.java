@@ -12,11 +12,11 @@ public class Item {
         return itemName;
     }
 
-    public int getReHp(){
+    public int getForHp(){
         return 0;
     }
 
-    public int getReMp(){
+    public int getForMp(){
         return 0;
     }
 }

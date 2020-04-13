@@ -17,8 +17,10 @@ public class PlayerInfoGui extends JFrame{
         status.setLayout(new BoxLayout(status,BoxLayout.Y_AXIS));
         JLabel playerLabel = new JLabel("Name : " + player.getName());
         JLabel playerLV = new JLabel("Level : " + player.getlvl());
+        JLabel playerExp = new JLabel("Exp : " + player.getexp());
         status.add(playerLabel);
         status.add(playerLV);
+        status.add(playerExp);
         JPanel p2 = new JPanel();
         p2.setLayout(new GridLayout(1,2));
         p2.setBorder(BorderFactory.createEmptyBorder(10,10,10,10));
@@ -40,7 +42,22 @@ public class PlayerInfoGui extends JFrame{
         select.add(pokeball);
         select.add(bag);
         container.add(select,BorderLayout.SOUTH);
+        bag.addActionListener(new ActionListener(){
 
+            @Override
+            public void actionPerformed(ActionEvent e){
+                new BagGui(player,1);
+                dispose();
+            }
+        });
+        pokeball.addActionListener(new ActionListener(){
+
+            @Override
+            public void actionPerformed(ActionEvent e){
+                new MyPokemonGui(Froakie);
+                dispose();
+            }
+        });
 
 
 

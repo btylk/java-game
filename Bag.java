@@ -1,15 +1,12 @@
 import java.util.ArrayList;
 
-/**
- * Bag
- */
 public class Bag {
 
     private ArrayList<Item> items;
     private int bagsize;
     public Bag(){
         items = new ArrayList<Item>();
-        bagsize = 20;
+        bagsize = 30;
     }
 
     public Item getItem(int index){
@@ -20,23 +17,23 @@ public class Bag {
             System.out.println("Not Found");
             return null;
         }
-        
     }
 
     public void addItem(Item newItem){
         if(items.size() < bagsize){
-           items.add(newItem); 
+            items.add(newItem);
         }
         else{
-            System.out.println("Bag is Full");
+            System.out.println("Full");
         }
     }
 
-    public int getNumberItem(){
+    public int getNumItem(){
         return items.size();
     }
 
-    public void removeItem(int index){
+    public void rmItem(int index){
         items.remove(index);
     }
+
 }

@@ -30,7 +30,7 @@ public class BagGui extends JFrame{
         container.add(panel);
         JPanel panel2 = new JPanel();
         JButton back = new JButton("Back");
-        penel2.add(back);
+        panel2.add(back);
         container.add(panel2);
         back.addActionListener(new ActionListener(){
             

@@ -28,6 +28,10 @@ public class Player {
         return level;
     }
 
+    public int getexp() {
+        return exp;
+    }
+
     public void expGain(int expIn){
         exp = exp + expIn;
         winCount++;
